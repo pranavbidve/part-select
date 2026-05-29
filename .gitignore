@@ -1,0 +1,32 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Environment variables
+.env
+
+# Claude Code session data
+.claude/
+CLAUDE.md
+plan.md
+
+# Scratch/working notebooks
+code/
+
+# Dev/demo files not for submission
+final.md
+speech.md
+stress_test.py
+test_graph.py
+loom.txt
+scripts/
+
+# Generated vector database
+chroma_db/
