@@ -1,6 +1,6 @@
-# PartSelect AI Chat Agent — Instalily Case Study
+# PartSelect AI Chat Agent 
 
-With a focus on improving **user experience** and the **extensibility** of the solution, this project implements a multi-agent AI chat system for the PartSelect e-commerce platform, specializing in refrigerator and dishwasher parts. The architecture is designed to be modular, observable, and extensible — reflecting how Instalily thinks about building vertical AI agents for the physical economy.
+With a focus on improving **user experience** and the **extensibility** of the solution, this project implements a multi-agent AI chat system for the PartSelect e-commerce platform, specializing in refrigerator and dishwasher parts. The architecture is designed to be modular, observable, and extensible 
 
 ---
 
@@ -32,9 +32,9 @@ The system uses a **supervisor-router + specialist agent** pattern built with La
 | **Recommendation Agent** | Triggers automatically when retrieved parts are low in stock — surfaces reorder urgency |
 | **Guard Node** | Blocks off-topic queries and redirects cleanly |
 
-### Custom Knowledge Base — Inspired by InstaBrain
+### Custom Knowledge Base 
 
-A core part of the architecture is a **custom ChromaDB vector database** built from PartSelect's parts catalog, seeded with company-specific inventory data (parts, pricing, stock levels, compatibility, warehouse locations). This mirrors Instalily's InstaBrain model — a domain-specific knowledge store trained on a company's own data, rather than relying on a general-purpose LLM to hallucinate product details. Agents query this database semantically (e.g. "ice maker not working Whirlpool") and get back grounded, accurate results from the company's actual inventory. The seed pipeline (`seed_data.py` → `seed_chroma.py`) makes it easy to swap in a real catalog without changing any agent logic.
+A core part of the architecture is a **custom ChromaDB vector database** built from PartSelect's parts catalog, seeded with company-specific inventory data (parts, pricing, stock levels, compatibility, warehouse locations). Agents query this database semantically (e.g. "ice maker not working Whirlpool") and get back grounded, accurate results from the company's actual inventory. The seed pipeline (`seed_data.py` → `seed_chroma.py`) makes it easy to swap in a real catalog without changing any agent logic.
 
 ### Key Design Choices
 
@@ -80,7 +80,7 @@ FastAPI server with a LangGraph multi-agent graph as the core.
 ## Project Structure
 
 ```
-case-study-instalily/
+/
 ├── backend/
 │   ├── agents/              # (reserved for future agent expansion)
 │   ├── data/
